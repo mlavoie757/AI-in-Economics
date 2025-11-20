@@ -1,11 +1,217 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My AI490 Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | AI in Economics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --primary: #1f3d78;
+      --primary-strong: #133163;
+      --text: #1e2a3a;
+      --muted: #5f6b7a;
+      --stroke: #dfe5f0;
+      --shadow: 0 14px 30px rgba(17, 37, 83, 0.08);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 36px 18px 48px;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-header h1 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin: 0 0 6px;
+      color: var(--primary);
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about {
+      margin-top: 30px;
+      padding: 26px 28px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .profile-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid var(--stroke);
+      background: linear-gradient(140deg, #d8e1f2, #f2f4fa);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .about h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: var(--text);
+    }
+
+    .about p {
+      margin: 8px 0;
+      color: #4a5565;
+      font-size: 16px;
+    }
+
+    .grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .action-card {
+      padding: 22px 22px 18px;
+      text-align: center;
+      transition: transform 150ms ease, box-shadow 150ms ease;
+    }
+
+    .action-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(25, 57, 109, 0.12);
+    }
+
+    .icon-ring {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #e8effc;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 16px;
+      color: var(--primary);
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .action-card h3 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      color: var(--text);
+    }
+
+    .action-card p {
+      margin: 0 0 14px;
+      color: #50607a;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      border: 1px solid var(--primary-strong);
+      transition: background 120ms ease, transform 120ms ease;
+    }
+
+    .btn:hover {
+      background: var(--primary-strong);
+      transform: translateY(-1px);
+    }
+
+    .note {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #6c7a8f;
+    }
+
+    @media (max-width: 800px) {
+      body {
+        padding: 24px 16px 36px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-placeholder {
+        max-width: 240px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello from my first webpage!</h1>
-<p>This page will later host my coursework</p>
+  <div class="page">
+    <header class="page-header">
+      <h1><!-- Replace with your name -->Matthew Lavoie</h1>
+      <p class="subtitle"><!-- Update with your main line -->Undergraduate Student, Managerial Economics | University of Massachusetts Amherst</p>
+    </header>
+
+    <section class="card about">
+      <div class="profile-placeholder"><!-- Swap src with your photo -->Add Photo</div>
+      <div>
+        <h2>About Me</h2>
+        <p><!-- Replace with your intro -->Welcome! I'm a Managerial Economics student with an interest in artificial intelligence and its applications in business and economics.</p>
+        <p><!-- Add more about yourself -->I'm passionate about leveraging data-driven insights and emerging technologies to solve complex problems. This portfolio showcases my academic work and projects in AI.</p>
+        <p><!-- Add extra context if desired -->Feel free to explore my resume and projects below to learn more about my background and experience.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card action-card">
+        <div class="icon-ring">R</div>
+        <h3>Resume</h3>
+        <p>View my professional background, education, and experience.</p>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+        <div class="note">(Place your resume file at <code>resume.pdf</code>)</div>
+      </article>
+
+      <article class="card action-card">
+        <div class="icon-ring">P</div>
+        <h3>Projects</h3>
+        <p>Explore my AI class project and academic work.</p>
+        <a class="btn" href="project.html">View Projects</a>
+        <div class="note">(Links to the AI class project page)</div>
+      </article>
+    </section>
+  </div>
 </body>
 </html>
